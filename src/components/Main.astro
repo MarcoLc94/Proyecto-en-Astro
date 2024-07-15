@@ -1,0 +1,53 @@
+<main>
+    <div class="background-image-example">
+        <h1>Construimos albercas de todas formas y dimensiones.</h1>
+    </div>
+</main>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+    .background-image-example {
+        display: flex;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden; /* Asegura que el contenido no sobresalga del div */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .background-image-example::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../public/_ID39450.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -2; /* Envía la imagen detrás del contenido del div */
+    }
+
+    .background-image-example::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Capa oscura superpuesta */
+        z-index: -1; /* Envía la capa oscura detrás del contenido del div pero delante de la imagen de fondo */
+    }
+
+    .background-image-example h1 {
+        position: relative;
+        z-index: 1; /* Asegura que el h1 esté por encima de la imagen de fondo */
+        color: white; /* Ajusta el color del texto según sea necesario */
+        text-align: center;
+        font-weight: 400;
+        font-family: "Arsenal SC";
+    }
+</style>
