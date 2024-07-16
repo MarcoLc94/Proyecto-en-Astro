@@ -1,0 +1,84 @@
+---
+---
+
+<style>
+   section {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+   }
+
+   section h1 {
+    text-align: center;
+    padding: 10px;
+   }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #1E90FF;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    .contact-form button:hover {
+      background-color: #00F0B8;
+    }
+  </style>
+  
+  <section class="contact-section">
+    <h1>Esto es un ejemplo del formulario</h1>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+  
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+  
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+  
+      // Aquí puedes añadir la lógica para enviar el formulario a tu servidor o servicio de correo.
+    }
+  </script>
+  
