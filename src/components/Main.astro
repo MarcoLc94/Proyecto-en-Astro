@@ -1,6 +1,39 @@
 <main>
     <div class="background-image-example">
         <h1>Construimos albercas de todas formas y dimensiones.</h1>
+        <div class="container-button">
+         <button>Contactame</button>
+        </div>
+    </div>
+    <div class="valores-container">
+        <div class="valor-container">
+            <div class="valor-title-container">
+            <img src="../../public/medalla.png" alt="">
+            <h3>Excelente calidad</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+        </div>
+        <div class="valor-container">
+            <div class="valor-title-container">
+            <img src="../../public/trabajador.png" alt="">
+            <h3>Profesionalismo</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+        </div>
+        <div class="valor-container">
+            <div class="valor-title-container">
+            <img src="../../public/satisfaccion.png" alt="">
+            <h3>Garantia de satisfaccion</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+        </div>
+        <div class="valor-container">
+            <div class="valor-title-container">
+            <img src="../../public/tiempo-rapido.png" alt="">
+            <h3>Rapidos</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+        </div>
     </div>
 </main>
 
@@ -9,6 +42,7 @@
     
     .background-image-example {
         display: flex;
+        flex-direction: column;
         position: relative;
         width: 100vw;
         height: 100vh;
@@ -50,4 +84,58 @@
         font-weight: 400;
         font-family: "Arsenal SC";
     }
+
+    .background-image-example .container-button {
+        display: flex;
+        justify-content:left;
+
+    }
+
+    
+    .background-image-example .container-button button{
+       padding: 5px 20px 5px 20px;
+       border-radius: 10px 10px 10px 10px;
+       border: none;
+       margin: 10px;
+       background-color: yellow;
+       font-weight: 500;
+    }
+
+    .background-image-example .container-button button:hover{
+       background-color: rgb(97, 97, 0); 
+       color: #ededed;
+    }
+
+    .valores-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        background-color: rgb(255, 255, 77);
+        padding: 15px;
+        gap: 5px;
+    }
+
+    .valor-title-container {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .valor-title-container img{
+        width: 40px;
+        padding: 5px;
+    }
+
+    @media(min-width: 600px){
+        .valores-container {
+            flex-direction: row;
+            width: 100vw;
+        }
+
+        .valor-container {
+            margin: 15px;
+        }
+    }
+
 </style>
