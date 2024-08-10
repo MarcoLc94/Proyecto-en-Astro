@@ -4,7 +4,10 @@
 
 <navbar>
   <nav>
-   <h1>Construcciones Gomez</h1>
+    <div class="title">
+     <h1>Construcciones Gomez</h1>
+     <p>📞 8128595397</p>
+    </div>
    <div class="menu">
      <a href="">Inicio</a>
      <a href="">Mis trabajos</a>
@@ -25,17 +28,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 10vh;
+
+        .title {
+            p{
+                margin: 0px 0px 10px 15px;
+            }
+        }
     }
 
     h1 {
         margin: 10px;
-        font-size: 18px;
+        font-size: 1.5rem;
         font-family: "Roboto Condensed";
         color: yellow;
     }
 
     h1:hover {
-        color: yellow;
+        font-size: 1.6rem;
+        cursor: pointer;
     }
 
     .menu {
@@ -45,10 +56,11 @@
     }
 
     .menu a {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .menu a:hover{
         color: yellow;
+        filter: drop-shadow(0px 0px 6px yellow);
     }
 </style>
