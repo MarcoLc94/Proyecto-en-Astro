@@ -27,7 +27,7 @@ const BackgroundChanger = () => {
     >
       <h1>Construimos albercas de todas formas y dimensiones.</h1>
       <div className="container-button">
-        <button>Contáctame</button>
+        <button href="#contact">Contacto</button>
       </div>
     </div>
   );

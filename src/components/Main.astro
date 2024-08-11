@@ -42,11 +42,12 @@ import BgChanger from "./BgChanger"
     .valores-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: space-between;
         background-color: rgb(255, 255, 77);
         text-align: center;
         width: 100vw;
-        border: 15px yellow solid;
+        height: auto;
+        border: 20px 10px 20px 10px transparent solid;
+      
 
         p {
             margin: 15px;
@@ -59,29 +60,44 @@ import BgChanger from "./BgChanger"
         align-items: center;
         justify-content: center;
         width: 25vw;
-        height: 10vh;
+        height: auto;
 
         h3 {
             font-weight: 900;
-            margin: 10px 10px 10px 0px;
+           
         }
     }
 
     .valor-title-container img{
         width: 40px;
-        margin: 0px 10px 0px 0px;
+        
     }
 
     @media(width < 900px){
-        .valores-container {
-            width: 100vw;
+        
+        .valor-title-container {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border: 10px solid transparent;
+
+            img {
+                margin: 10px;
+            }
         }
 
-        .valor-container {
-            margin: 15px;
+
+        .valores-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
+      
     }
 
 </style>

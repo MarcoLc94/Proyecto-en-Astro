@@ -13,8 +13,8 @@
   }
 
   .floating-button {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -23,27 +23,24 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s;
+    filter: drop-shadow(0px 0px 20px green);
   }
 
   .floating-button:hover {
     transform: scale(1.1);
+    filter: drop-shadow(0px 0px 30px rgb(41, 255, 41));
+    
   }
 
   .floating-button img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .messenger {
-    background-color: #0084FF; /* Messenger color */
+    width: 40px;
+    height: 40px;
+  
   }
 </style>
 
 <div class="floating-buttons">
-  <a href="https://wa.me/tuNumeroDeTelefono" class="floating-button" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/8128595397?text=Hola,%20vengo%20de%20tu%20página%20web%20me%20interesa%20un%20presupuesto." class="floating-button" target="_blank" rel="noopener noreferrer">
     <img src="../../public/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="https://m.me/tuNombreDeUsuario" class="floating-button messenger" target="_blank" rel="noopener noreferrer">
-    <img src="../../public/mensajero.png" alt="Messenger" />
   </a>
 </div>

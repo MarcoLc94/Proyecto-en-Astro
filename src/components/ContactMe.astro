@@ -8,11 +8,14 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    border: 10px solid transparent;
    }
 
    section h1 {
     text-align: center;
     padding: 10px;
+    font-family: Arsenal SC;
+    margin: 20px;
    }
 
     .contact-form {
@@ -21,9 +24,13 @@
       width: 100%;
       max-width: 500px;
       padding: 20px;
-      background-color: white;
+      background-color: rgb(255, 255, 75);
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      label {
+        font-weight: 600;
+      }
     }
   
     .contact-form input,
@@ -46,20 +53,21 @@
     }
   
     .contact-form button:hover {
-      background-color: #00F0B8;
+      
+      transform: scale(1.1);
     }
   </style>
   
-  <section class="contact-section">
-    <h1>Esto es un ejemplo del formulario</h1>
+  <section class="contact-section" id="">
+    <h1>Contacto</h1>
     <form class="contact-form" onsubmit="handleSubmit(event)">
-      <label for="name">Name</label>
+      <label for="name">Nombre:</label>
       <input type="text" id="name" name="name" required />
   
-      <label for="email">Email</label>
+      <label for="email">Telefono:</label>
       <input type="email" id="email" name="email" required />
   
-      <label for="message">Message</label>
+      <label for="message">Mensaje:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
   
       <button type="submit">Send</button>
