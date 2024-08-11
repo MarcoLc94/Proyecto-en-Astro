@@ -34,7 +34,7 @@ const BackgroundChanger = () => {
     >
       <h1>Construimos albercas de todas formas y dimensiones.</h1>
       <div className="container-button">
-        <button onClick={handleScroll}>Contacto</button>
+        <button client:load="true" onClick={handleScroll}>Contacto</button>
       </div>
     </div>
   );
