@@ -1,23 +1,29 @@
-// src/components/BackgroundChanger.jsx
 import { useEffect, useState } from 'react';
-import "./BgChanger.css"
+import "./BgChanger.css";
 
 const BackgroundChanger = () => {
-  const images = [1, 2, 3, 4, 5, 6];
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1); 
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
+    const timeoutId = setTimeout(() => {
+      console.log("hola");
+      setIndex((prevIndex) => {
+        if (prevIndex < 6) {
+          console.log(prevIndex);
+          return prevIndex + 1;
+        } else {
+          return 1; // Reinicia el índice a 1 si es mayor que 6
+        }
+      });
+    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, [images.length]);
+    return () => clearTimeout(timeoutId); // Limpia el timeout al desmontar el componente
+  }, [index]);
 
   return (
     <div 
       className="background-image-example"
-      style={{ backgroundImage: `url(/alberca${index + 1}.jpg)` }} // Ruta ajustada
+      style={{ backgroundImage: `url(/alberca${index}.jpg)`}}
     >
       <h1>Construimos albercas de todas formas y dimensiones.</h1>
       <div className="container-button">

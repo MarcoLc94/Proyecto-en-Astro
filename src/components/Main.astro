@@ -8,30 +8,30 @@ import BgChanger from "./BgChanger"
         <div class="valor-container">
             <div class="valor-title-container">
             <img  src="../../public/medalla.png" alt="">
-            <h3>Excelente calidad</h3>
+            <h3>Calidad</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+            <p>Nos enorgullece ofrecer materiales y acabados de la más alta calidad, garantizando la durabilidad y resistencia de cada una de nuestras albercas.</p>
         </div>
         <div class="valor-container">
             <div class="valor-title-container">
             <img src="../../public/trabajador.png" alt="">
             <h3>Profesionalismo</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+            <p>Contamos con un equipo altamente capacitado y comprometido con la excelencia en cada proyecto, desde el diseño hasta la entrega final.</p>
         </div>
         <div class="valor-container">
             <div class="valor-title-container">
             <img src="../../public/satisfaccion.png" alt="">
-            <h3>Garantia de satisfaccion</h3>
+            <h3>Satisfaccion</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+            <p>Nos aseguramos de que cada detalle cumpla con las expectativas de nuestros clientes, proporcionando resultados que superan sus expectativas.</p>
         </div>
         <div class="valor-container">
             <div class="valor-title-container">
             <img src="../../public/tiempo-rapido.png" alt="">
-            <h3>Rapidos</h3>
+            <h3>Agilidad</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dicta.</p>
+            <p>Entregamos proyectos dentro del plazo acordado sin comprometer la calidad, para que disfrutes de tu alberca en el menor tiempo posible.</p>
         </div>
     </div>
 </main>
@@ -40,30 +40,43 @@ import BgChanger from "./BgChanger"
     @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     .valores-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: space-between;
-        height: auto;
         background-color: rgb(255, 255, 77);
-        padding: 15px;
-        gap: 5px;
+        text-align: center;
+        width: 100vw;
+        border: 15px yellow solid;
+
+        p {
+            margin: 15px;
+            text-align: justify;
+        }
     }
 
     .valor-title-container {
         display: flex;
         align-items: center;
+        justify-content: center;
+        width: 25vw;
+        height: 10vh;
 
+        h3 {
+            font-weight: 900;
+            margin: 10px 10px 10px 0px;
+        }
     }
 
     .valor-title-container img{
         width: 40px;
-        padding: 5px;
+        margin: 0px 10px 0px 0px;
     }
 
-    @media(min-width: 600px){
+    @media(width < 900px){
         .valores-container {
-            flex-direction: row;
             width: 100vw;
+            display: flex;
+            flex-direction: column;
         }
 
         .valor-container {
