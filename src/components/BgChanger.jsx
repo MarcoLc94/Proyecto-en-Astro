@@ -2,32 +2,39 @@ import { useEffect, useState } from 'react';
 import "./BgChanger.css";
 
 const BackgroundChanger = () => {
-  const [index, setIndex] = useState(1); 
+  const [index, setIndex] = useState(1);
 
+  const handleScroll = () => {
+    // Obtén el elemento con el ID "contacto" y haz scroll hacia él
+   console.log("hola")
+  };
+  
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      console.log("hola");
       setIndex((prevIndex) => {
-        if (prevIndex < 6) {
-          console.log(prevIndex);
-          return prevIndex + 1;
-        } else {
-          return 1; // Reinicia el índice a 1 si es mayor que 6
-        }
+        const newIndex = prevIndex < 6 ? prevIndex + 1 : 1;
+        console.log(newIndex);
+  
+        // Forzar actualización del estilo
+        document.querySelector('.background-image-example').style.backgroundImage = `url(/alberca${newIndex}.jpg)`;
+  
+        return newIndex;
       });
-    }, 1000);
-
-    return () => clearTimeout(timeoutId); // Limpia el timeout al desmontar el componente
+    }, 2000);
+  
+    return () => clearTimeout(timeoutId);
   }, [index]);
+
 
   return (
     <div 
       className="background-image-example"
       style={{ backgroundImage: `url(/alberca${index}.jpg)`}}
+      id="home"
     >
       <h1>Construimos albercas de todas formas y dimensiones.</h1>
       <div className="container-button">
-        <button href="#contact">Contacto</button>
+        <button onClick={handleScroll}>Contacto</button>
       </div>
     </div>
   );

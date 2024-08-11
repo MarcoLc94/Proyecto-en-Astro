@@ -63,3 +63,7 @@ a {
 #__next {
   isolation: isolate;
 }
+
+html {
+  scroll-behavior: smooth;
+}

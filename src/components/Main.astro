@@ -1,9 +1,10 @@
 ---
-import BgChanger from "./BgChanger"
+import BackgroundChanger from "../components/BgChanger.jsx"
+
 ---
 
 <main>
-   <BgChanger/>
+   <BackgroundChanger client:load />
     <div class="valores-container">
         <div class="valor-container">
             <div class="valor-title-container">
@@ -31,7 +32,7 @@ import BgChanger from "./BgChanger"
             <img src="/tiempo-rapido.png" alt="">
             <h3>Agilidad</h3>
             </div>
-            <p>Entregamos proyectos dentro del plazo acordado sin comprometer la calidad, para que disfrutes de tu alberca en el menor tiempo posible.</p>
+            <p id="gallery">Entregamos proyectos dentro del plazo acordado sin comprometer la calidad, para que disfrutes de tu alberca en el menor tiempo posible.</p>
         </div>
     </div>
 </main>
