@@ -7,6 +7,8 @@ const BackgroundChanger = () => {
   const handleScroll = () => {
     // Obtén el elemento con el ID "contacto" y haz scroll hacia él
    console.log("hola")
+   const access = document.getElementById("contact")
+   access.scrollIntoView({ behavior: 'smooth' });
   };
   
   useEffect(() => {
