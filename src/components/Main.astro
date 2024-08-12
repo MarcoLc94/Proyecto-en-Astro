@@ -47,13 +47,16 @@ import BackgroundChanger from "../components/BgChanger.jsx"
         text-align: center;
         width: 100%;
         height: auto;
-       
+         
         
-        .valor-container{
-            width: 100%;
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            height: auto;
+        .valor-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+          justify-content: center; 
+          text-align: justify;
+          height: auto;
         }
 
         p {
@@ -72,7 +75,7 @@ import BackgroundChanger from "../components/BgChanger.jsx"
 
         h3 {
             font-weight: 900;
-           
+           margin: 15px;
         }
     }
 
@@ -91,6 +94,10 @@ import BackgroundChanger from "../components/BgChanger.jsx"
             width: 100%;
             border: 10px solid transparent;
 
+            h3 {
+                margin: 5px;
+            }
+
             img {
                 margin: 10px;
             }
@@ -105,6 +112,15 @@ import BackgroundChanger from "../components/BgChanger.jsx"
             align-items: center;
         }
 
+       .valor-container {
+        text-align: center;
+        display: flex;
+
+        p{
+            text-align: center;
+            width: 85vw;
+        }
+       }
       
     }
 

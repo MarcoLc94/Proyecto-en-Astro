@@ -6,17 +6,17 @@
         <h1>Galeria</h1>
         <div class="card-container">
             <div class="card-info">
-                <h2>Alberca 1</h2>
+                <!-- <h2>Alberca 1</h2> -->
                 <img src="/alberca1.jpg" alt="">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, nulla!</p>
             </div>
             <div class="card-info">
-                <h2>Alberca 2</h2>
+                <!-- <h2>Alberca 2</h2> -->
                 <img src="/alberca2.jpg" alt="">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, nulla!</p>
             </div>
             <div class="card-info">
-                <h2>Alberca 3</h2>
+                <!-- <h2>Alberca 3</h2> -->
                 <img src="/alberca4.jpg" alt="">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, nulla!</p>
             </div>
@@ -57,10 +57,14 @@
         padding: 10px;
         width: 33%;
         margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .card-info p {
         width: 60%;
+        padding: 10px;
     }
 
     .card-info img{
@@ -68,10 +72,8 @@
        height: 180px;
     }
 
-    .card-info img:hover {
-        width: 250px;
-        height: 200px;
-       
+    .card-info:hover {
+       transform: scale(1.2);
     }
 
     @media (max-width: 500px) {
