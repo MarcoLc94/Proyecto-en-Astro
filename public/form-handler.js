@@ -1,26 +1,23 @@
 // public/form-handler.js
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".contact-form");
-    if (form) {
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
   
-        const formData = new FormData(form);
+    const formData = new FormData(e.target);
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData)),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   
-        try {
-          const response = await fetch("/api/send-email", {
-            method: "POST",
-            body: formData,
-          });
-          const result = await response.json();
-          console.log(result);
-          alert("Email enviado con éxito!");
-        } catch (error) {
-          console.error("Error al enviar el email:", error);
-          alert("Error al enviar el email.");
-        }
-      });
+    const result = await response.json();
+    if (response.ok) {
+      alert('Email sent successfully!');
+      e.target.reset();
+    } else {
+      alert('Failed to send email: ' + result.error);
     }
   });
   
