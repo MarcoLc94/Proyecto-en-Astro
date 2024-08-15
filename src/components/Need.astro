@@ -5,7 +5,10 @@
 
 <need>
     <div class="explain-container">
-        <h1>Construimos todo tipo de albercas</h1>
+        <div class="explain-title">
+          <h1>Construimos todo tipo de albercas</h1>
+        </div> 
+        <div class="need-title">
         <div class="explain-card">
             <img src="/2067016.png" alt="">
             <h1>Rectangular</h1>
@@ -20,6 +23,7 @@
             <img src="/hidro.png" alt="">
             <h1>Hidromasaje</h1>
             <p>Disfruta del máximo lujo con nuestras albercas de hidromasaje. Perfectas para relajarte después de un largo día, estas albercas combinan diseño sofisticado con tecnología avanzada para brindarte una experiencia de bienestar inigualable.</p>
+        </div>
         </div>
     </div>
 </need>
@@ -37,6 +41,16 @@
     .explain-container h1{
         text-align: center;
         font-family: "Arsenal SC";
+        padding: 10px;
+    }
+
+    .need-title {
+        display: flex;
+    }
+    
+    .explain-title {
+        display: flex;
+        flex-direction: column;
     }
 
     .explain-card {

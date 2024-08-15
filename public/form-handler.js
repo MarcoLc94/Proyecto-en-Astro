@@ -1,23 +1,27 @@
-// public/form-handler.js
+// src/form-handler.js
 
-document.querySelector('.contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
+document.querySelector('.contact-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
   
-    const formData = new FormData(e.target);
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      body: JSON.stringify(Object.fromEntries(formData)),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const form = event.target;
+    const formData = new FormData(form);
   
-    const result = await response.json();
-    if (response.ok) {
-      alert('Email sent successfully!');
-      e.target.reset();
-    } else {
-      alert('Failed to send email: ' + result.error);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const result = await response.json();
+      
+      if (response.ok) {
+        alert(result.message); // Mensaje de éxito
+      } else {
+        alert(result.message); // Mensaje de error
+      }
+    } catch (error) {
+      console.error('Error al enviar el correo:', error);
+      alert('Error al enviar el correo.');
     }
   });
   

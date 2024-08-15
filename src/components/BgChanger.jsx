@@ -14,7 +14,7 @@ const BackgroundChanger = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIndex((prevIndex) => {
-        const newIndex = prevIndex < 6 ? prevIndex + 1 : 1;
+        const newIndex = prevIndex < 7 ? prevIndex + 1 : 1;
         console.log(newIndex);
   
         // Forzar actualización del estilo
@@ -34,7 +34,7 @@ const BackgroundChanger = () => {
       style={{ backgroundImage: `url(/alberca${index}.jpg)`}}
       id="home"
     >
-      <h1>Construimos albercas de todas formas y dimensiones.</h1>
+      <h1>Construimos  albercas de todas formas y dimensiones.</h1>
       <div className="container-button">
         <button client:load="true" onClick={handleScroll}>Contacto</button>
       </div>
