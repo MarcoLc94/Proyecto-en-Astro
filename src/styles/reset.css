@@ -64,3 +64,6 @@ a {
   isolation: isolate;
 }
 
+html {
+  scroll-behavior: smooth;
+}

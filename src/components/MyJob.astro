@@ -24,6 +24,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 .myJob-container {
     width: 100vw;
     margin: 0 auto;
@@ -66,7 +70,6 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -136,26 +139,27 @@ h1 {
 }
 
 </style>
-
 <script>
-    // Asegúrate de que el script se ejecute solo en el cliente.
     if (typeof window !== 'undefined') {
-        const modal = document.getElementById("imageModal");
+      // Se obtienen los elementos necesarios para el funcionamiento del modal
+    const modal = document.getElementById("imageModal");
     const images = document.querySelectorAll<HTMLImageElement>(".clickable-image img");
     const modalImg = document.getElementById("modalImage") as HTMLImageElement;
     const captionText = document.getElementById("caption");
     const closeBtn = document.querySelector(".close") as HTMLElement;
   
-    images.forEach((img) => {
-      img.addEventListener('click', () => {
-        modal.style.display = "flex";
-        modal.style.alignItems = "center"
-        modalImg.style.width = "50vw"
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
+      // Asegúrate de que el modal esté oculto al cargar la página
+      modal.style.display = "none";
+  
+      images.forEach((img) => {
+        img.addEventListener('click', () => {
+          modal.style.display = "flex";
+          modal.style.alignItems = "center";
+          modalImg.style.width = "50vw";
+          modalImg.src = img.src;
+          captionText.innerHTML = img.alt || '';
+        });
       });
-    });
-
   
       closeBtn.addEventListener('click', () => {
         modal.style.display = "none";
@@ -168,3 +172,4 @@ h1 {
       });
     }
   </script>
+  

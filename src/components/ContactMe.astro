@@ -4,7 +4,7 @@
 
 <section class="contact-section" id="contact">
   <h1>Contacto</h1>
-  <form class="contact-form">
+  <form class="contact-form" action="https://formspree.io/f/xyzgpjby" method="POST" enctype="multipart/form-data">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" required />
 
@@ -13,12 +13,10 @@
 
     <label for="message">Mensaje:</label>
     <textarea id="message" name="message" rows="5" required></textarea>
-
+    <input type="hidden" name="_next" value="/thanks">
     <button type="submit">Enviar</button>
   </form>
 </section>
-
-<script src="/form-handler.js" type="module"></script>
 
 <style>
   section {
