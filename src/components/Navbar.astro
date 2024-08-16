@@ -133,7 +133,8 @@ h1:hover {
     opacity: 0.95;
     position: fixed; /* Asegura que el menú esté fijo en el viewport */
     top: 0;
-    left: 0;
+    left: 50%; /* Alinea el menú a la mitad del viewport horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal para centrar el menú */
     padding: 10px;
     z-index: 1000;
     overflow-y: auto; /* Permite el desplazamiento si el contenido es más largo que el viewport */
@@ -141,7 +142,7 @@ h1:hover {
     justify-content: center;
     gap: 60px;
     filter: drop-shadow(0px 0px 10px yellow);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
   }
 
   .menu a {
@@ -161,8 +162,8 @@ h1:hover {
   .title p {
     font-size: 14px;
   }
-
 }
+
 
 </style>
 
