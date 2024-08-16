@@ -15,7 +15,7 @@ const $$IconsContact = createComponent(($$result, $$props, $$slots) => {
 }, "C:/Users/Usuario/OneDrive/Documentos/GitHub/ConstruccionesGomez/shining-star/src/components/IconsContact.astro", void 0);
 
 const $$Footer = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<footer data-astro-cid-sz7xmlte> <div class="footer-container" data-astro-cid-sz7xmlte> <div class="text-footer" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte> © 2024 Construcciones Gomez. Todos los derechos reservados.
+  return renderTemplate`${maybeRenderHead()}<footer data-astro-cid-sz7xmlte> <div class="footer-container" data-astro-cid-sz7xmlte> <div class="text-footer" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte> © 2024 Construcciones Gómez. Todos los derechos reservados.
 </p> </div> </div> </footer> `;
 }, "C:/Users/Usuario/OneDrive/Documentos/GitHub/ConstruccionesGomez/shining-star/src/components/Footer.astro", void 0);
 
