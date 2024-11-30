@@ -6,7 +6,6 @@ const BackgroundChanger = () => {
 
   const handleScroll = () => {
     // Obtén el elemento con el ID "contacto" y haz scroll hacia él
-   console.log("hola")
    const access = document.getElementById("contact")
    access.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,7 +14,6 @@ const BackgroundChanger = () => {
     const timeoutId = setTimeout(() => {
       setIndex((prevIndex) => {
         const newIndex = prevIndex < 7 ? prevIndex + 1 : 1;
-        console.log(newIndex);
   
         // Forzar actualización del estilo
         document.querySelector('.background-image-example').style.backgroundImage = `url(/alberca${newIndex}.jpg)`;
